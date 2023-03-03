@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABESIT</title>
+    <script src="https://kit.fontawesome.com/15799de300.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="slide-menu" id="menu-slider">
+        <ul class="menu-list">
+            <li><a href="#">Menu item 1</a></li>
+            <li><a href="#">Menu item 2</a></li>
+            <li><a href="#">Menu item 3</a></li>
+        </ul>
+    </div>
+    <div class="nav-class">
+        <!-- Navbar -->
+        <div class="nav-logo">
+            <button class="menu-button"><i class="fa-solid fa-bars fa-xl"></i></button>
+            <img clas="ham-logo" src="images/sim-logo.png" />
+            <p>SIM
+                <span class="nav-span">Student Interface</span>
+            </p>
+        </div>
+
+        <!-- logo -->
+        <div class="logo">
+            <img src="images/college-logo.png" />
+        </div>
+
+        <!-- avatar -->
+        <div class="avatar">
+            <img src="images/avatar.png" />
+            <div class="dropdown">
+                <a href="#" class="dropbtn" onclick="myFunction()">Drishti
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="element-wrapper">
+        <div class="element-container">
+            <div class="attendance">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="fees">
+                <h1>Your due fees:</h1>
+                <p><a href="#">Due Amount: Rs.9,999 > </a></p>
+            </div>
+            <div class="exam">
+                <h1><a href="">Upcoming Exam:</a></h1>
+                <table>
+                    <tr>
+                        <td>1.</td>
+                        <td>Engineering Mathematics</td>
+                        <td>09 Jan 2023</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Data Structures</td>
+                        <td>11 Jan 2023</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="events">
+                <h1>Events to be held:</h1>
+                <p><a href="#">Women's Day</a></p>
+                <p>06-03-2023</p>
+                <hr>
+                <p><a href="#">Holi Celebration</a></p>
+                <p>08-03-2023</p>
+            </div>
+        </div>
+
+        <div class="elements-body">
+            <div class="schdeule">
+                <!-- <div class="class-schdeule">
+                </div>
+                <div class="assignment">
+                </div> -->
+                <div class="switch-tabs">
+                    <button class="btn-tabs active" onclick="openTab('weekly-assignment')">Assignment</button>
+                    <button class="btn-tabs" onclick="openTab('class-schdeule')">Class Schdeule</button>
+                </div>
+
+                <div id="class-schdeule" class="tabs">
+                    <h2>Class Schdeule</h2>
+                    <p>No class for today</p>
+                </div>
+
+                <div id="weekly-assignment" class="tabs" style="display:none">
+                    <h2>Assignment</h2>
+                    <p>No assignment for today.</p>
+                </div>
+
+
+            </div>
+            <div class="weekly-attendance">
+                <h1>Weekly Attendance</h1>
+                <div>class 1 : 12%</div>
+                <div>class 2 : 12%</div>
+                <div>class 3 : 12%</div>
+                <div>class 4 : 12%</div>
+                <div>class 5 : 12%</div>
+            </div>
+            <div class="news"> News</div>
+        </div>
+        <div class="footer-content"> For any technical issue, please write to <a href="mailto:info@abesit.in">ABESIT</a>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        // ------Menu slidebar
+        const menuButton = document.querySelector(".menu-button");
+        const slideMenu = document.querySelector(".slide-menu");
+
+        menuButton.addEventListener("click", () => {
+            slideMenu.classList.toggle("open");
+        });
+        window.onclick = function (e) {
+            if (!e.target.matches('.slide-menu')) {
+                var myDropdown = document.getElementsById("menu-slider");
+                if (myDropdown.classList.contains("open")) {
+                    myDropdown.classList.remove('open');
+                }
+            }
+        }
+        // window.onclick = function (e) {
+        //     if (!e.target.matches('.dropbtn')) {
+        //         var myDropdown = document.getElementById("myDropdown");
+        //         if (myDropdown.classList.contains('show')) {
+        //             myDropdown.classList.remove('show');
+        //         }
+        //     }
+        // }
+
+
+
+        // ------ring chart
+        function createRingChart() {
+            // Get the canvas element
+            var ctx = document.getElementById("myChart").getContext("2d");
+
+            // Create the data for the chart
+            var data = {
+                labels: ["Above 85%", "75% to 85%", "Below 75%"],
+                datasets: [{
+                    data: [70, 15, 10],
+                    backgroundColor: ["#109618", "#F4C242", "#DC3912"],
+                    hoverBackgroundColor: ["#109618", "#F4C242", "#DC3912"]
+                }]
+            };
+
+            // Create the options for the chart
+            var options = {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutoutPercentage: 50
+            };
+
+            // Create the ring chart using Chart.js
+            var myRingChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: options,
+            });
+        }
+        // Call the function to create the chart
+        createRingChart();
+
+        // ------avatar-dropdown
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+
+        // for tabs
+        function openTab(tabName) {
+            var i;
+            var x = document.getElementsByClassName("tabs");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
