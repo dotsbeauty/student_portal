@@ -11,4 +11,4 @@
 
 💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
 
-![preview img](./preview.png)
+!![image](https://user-images.githubusercontent.com/67326784/223712086-1679273c-ee77-49c3-96cf-3789e44b9d0b.png)
