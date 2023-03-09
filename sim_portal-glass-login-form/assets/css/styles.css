@@ -102,18 +102,21 @@ img {
 }
 
 .login__label-profile {
+  cursor: pointer;
   color: #fff;
   font-weight: var(--font-semi-bold);
   margin-left: 0.5rem;
 }
 
 .input-profile {
+  cursor: pointer;
   display: flex;
   align-items: center;
   padding-inline: 3.5rem;
 }
 
 .login__radio-input {
+  cursor: pointer;
   appearance: none;
   width: 16px;
   height: 16px;
