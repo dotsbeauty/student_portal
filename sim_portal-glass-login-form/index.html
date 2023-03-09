@@ -60,18 +60,24 @@
                                 <i class="ri-eye-off-line login__eye" id="input-icon"></i>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="login__check">
-                        <input type="checkbox" class="login__check-input">
-                        <label for="" class="login__check-label">Remember me</label>
+                        <div class="login__check">
+                            <input type="checkbox" class="login__check-input">
+                            <label for="" class="login__check-label">Remember me</label>
+                        </div>
+
+                        <div>
+                            <canvas class="login__captcha" id="captcha">Captcha Text</canvas>
+                            <input type="text" placeholder="Enter above captcha" required class="login__input" id="input-captcha">
+                        </div>
+                        <!-- <span id="output"></span> -->
                     </div>
                 </div>
 
                 <div>
                     <div class="login__buttons">
-                        <button class="login__button">Login</button>
-                        <button class="login__button login__button-ghost">Sign Up</button>
+                        <button class="login__button" id="input-button">Login</button>
+                        <!-- <button class="login__button login__button-ghost">Sign Up</button> -->
                     </div>
 
                     <a href="#" class="login__forgot">Forgot Passowrd?</a>

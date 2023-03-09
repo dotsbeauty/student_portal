@@ -88,6 +88,7 @@ img {
   backdrop-filter: blur(20px);
   padding: 2rem;
   border-radius: 1rem;
+  justify-content: center;
 }
 
 .login__profile {
@@ -206,6 +207,23 @@ img {
   cursor: pointer;
 }
 
+.login__captcha {
+  height: 60%;
+  width: 60%;
+  font-size: 30px;
+  letter-spacing: 3px;
+  display: block;
+  margin: auto;
+}
+
+.incorrectCaptcha {
+  color: red;
+}
+
+.correctCaptcha {
+  color: green;
+}
+
 .login__check {
   display: flex;
   column-gap: 0.5rem;
@@ -295,7 +313,7 @@ img {
 
   .login__content {
     width: 1024px;
-    height: 600px;
+    height: 768px;
   }
 
   .login__img {
@@ -311,12 +329,13 @@ img {
 
 @media screen and (min-width: 1200px) {
   .login__content {
-    height: 700px;
+    width: 1280px;
+    height: 920px;
   }
 
   .login__form {
-    row-gap: 2rem;
-    padding: 3rem;
+    row-gap: 1.5rem;
+    padding: 2.5rem;
     border-radius: 1.25rem;
     border: 2.5px solid hsla(244, 16%, 92%, 0.75);
   }
