@@ -1,215 +1,280 @@
 <!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <title>ABESIT</title>
-    <script src="https://kit.fontawesome.com/15799de300.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <div class="slide-menu" id="menu-slider">
-        <ul class="menu-list">
-            <li><a href="#">Menu item 1</a></li>
-            <li><a href="#">Menu item 2</a></li>
-            <li><a href="#">Menu item 3</a></li>
-        </ul>
-    </div>
-    <div class="nav-class">
-        <!-- Navbar -->
-        <div class="nav-logo">
-            <button class="menu-button"><i class="fa-solid fa-bars fa-xl"></i></button>
-            <img clas="ham-logo" src="images/sim-logo.png" />
-            <p>SIM
-                <span class="nav-span">Student Interface</span>
-            </p>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="asset/images/sim-logo.png" alt="">
+            </div>
+
+            <span class="logo_name">
+                <h1>SIM</h1>
+                <p>Student Interface</p>
+            </span>
         </div>
 
-        <!-- logo -->
-        <div class="logo">
-            <img src="images/college-logo.png" />
+        <div class="menu-items">
+            <ul class="nav-search">
+                <li>
+                    <a href="#">
+                        <i class="uil uil-search"></i>
+                        <input type="search" class="link-name" placeholder="Search..." />
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-calendar-alt"></i>
+                        <span class="link-name">My Calendar</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-diary"></i>
+                        <span class="link-name">Course Planner</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-books"></i>
+                        <span class="link-name">Library</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-university "></i>
+                        <span class="link-name">Question Bank</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Student Details</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Faculty Feedback</span>
+                    </a></li>
+            </ul>
+
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <div id="moon-sun">
+                            <i class='uil uil - brightness'></i>
+                        </div>
+                        <span class="link-name" id="link-text">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+            <span class="logo_name clg-logo">
+                <img src="asset/images/logo.png" alt="">
+            </span>
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            <img src="asset/images/avatar.png" alt="">
         </div>
 
-        <!-- avatar -->
-        <div class="avatar">
-            <img src="images/avatar.png" />
-            <div class="dropdown">
-                <a href="#" class="dropbtn" onclick="myFunction()">Drishti
-                    <i class="fa-solid fa-angle-down"></i>
-                </a>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-analytics"></i>
+                        <span class="text">Attendance</span>
+                        <span class="number progress-wrapper">
+                            <div class="progress-bar">
+                                <div class="progress lessthan"></div>
+                                <div class="progress morethan"></div>
+                                <div class="progress equalto"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-money-withdrawal"></i>
+                        <span class="text">Fees Due:</span>
+                        <span class="number">20,120</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-edit-alt"></i>
+                        <span class="text">Upcoming Exam:</span>
+                        <span class="number">
+                            <p>Computer Graphics</p>
+                            <p id="data">26-03-2023</p>
+                        </span>
+                    </div>
+                    <div class="box box4">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Upcoming Event:</span>
+                        <span class="number">
+                            <p>Farewell Party</p>
+                            <p id="data">06-04-2023</p>
+                        </span>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </div>
-
-    <div class="element-wrapper">
-        <div class="element-container">
-            <div class="attendance">
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="fees">
-                <h1>Your due fees:</h1>
-                <p><a href="#">Due Amount: Rs.9,999</a></p>
-            </div>
-            <div class="exam">
-                <h1><a href="">Upcoming Exam:</a></h1>
-                <table>
-                    <tr>
-                        <td>1.</td>
-                        <td>Engineering Mathematics</td>
-                        <td>09 Jan 2023</td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Data Structures</td>
-                        <td>11 Jan 2023</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="events">
-                <h1>Events to be held:</h1>
-                <p><a href="#">Women's Day</a></p>
-                <p>06-03-2023</p>
-                <hr>
-                <p><a href="#">Holi Celebration</a></p>
-                <p>08-03-2023</p>
-            </div>
-        </div>
-
-        <div class="elements-body">
-            <div class="schdeule">
-                <!-- <div class="class-schdeule">
-                </div>
-                <div class="assignment">
-                </div> -->
-                <div class="switch-tabs">
-                    <button class="btn-tabs active" onclick="openTab('weekly-assignment')">Assignment</button>
-                    <button class="btn-tabs" onclick="openTab('class-schdeule')">Class Schdeule</button>
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
                 </div>
 
-                <div id="class-schdeule" class="tabs">
-                    <h2>Class Schdeule</h2>
-                    <p>No class for today</p>
+                <div class="activity-data">
+
+                    <div class="myweektabs weekly-classes acts">
+
+                        <input type="radio" id="schedule" name="myweektabs" checked="checked">
+                        <label for="schedule">My Schedule</label>
+                        <div class="weektab">
+                            <h2>Class Schedule</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Sr No.</td>
+                                        <td>Subject Name</td>
+                                        <td>Subject Code</td>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Computer Graphics</td>
+                                    <td>KNC101</td>
+
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>DSA</td>
+                                    <td>KNC121</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Operating System</td>
+                                    <td>KNC141</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <input type="radio" id="assignments" name="myweektabs">
+                        <label for="assignments">My Assignments</label>
+                        <div class="weektab">
+                            <h2>Assignments</h2>
+                            <p>No assignment today.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="weekly-attendance acts">
+                        <label>Weekly Attendance</label>
+                        <div class="attendance_wrapper">
+                            <!-- <div class="attendance_container">
+                                <h3>Computer Graphics</h3>
+                                <div id="chart"></div>
+                            </div>
+                            <div class="attendance_container">
+                                <h3>Computer Graphics</h3>
+                            </div>
+                            <div class="attendance_container">
+                                <h3>Computer Graphics</h3> -->
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Sr No.</td>
+                                        <td>Subject Name</td>
+                                        <td>Subject Code</td>
+                                        <td>Attended/Delivered</td>
+                                        <td>Percent</td>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Computer Graphics</td>
+                                    <td>KNC101</td>
+                                    <td>9/10</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>DSA</td>
+                                    <td>KNC121</td>
+                                    <td>9/10</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Operating System</td>
+                                    <td>KNC141</td>
+                                    <td>9/10</td>
+                                    <td>90%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mytabs">
+                <input type="radio" id="tabfree" name="mytabs" checked="checked">
+                <label for="tabfree">News</label>
+                <div class="tab">
+                    <h2>News</h2>
+                    <p>Here a news will be displayed.</p>
                 </div>
 
-                <div id="weekly-assignment" class="tabs" style="display:none">
-                    <h2>Assignment</h2>
-                    <p>No assignment for today.</p>
+                <input type="radio" id="tabsilver" name="mytabs">
+                <label for="tabsilver">Notice</label>
+                <div class="tab">
+                    <h2>Notice</h2>
+                    <p>Here a notice will be displayed.</p>
                 </div>
 
+                <input type="radio" id="tabgold" name="mytabs">
+                <label for="tabgold">Alerts</label>
+                <div class="tab">
+                    <h2>Alerts</h2>
+                    <p>Here a alerts will be displayed.</p>
+                </div>
 
             </div>
-            <div class="weekly-attendance">
-                <h1>Weekly Attendance</h1>
-                <div>class 1 : 12%</div>
-                <div>class 2 : 12%</div>
-                <div>class 3 : 12%</div>
-                <div>class 4 : 12%</div>
-                <div>class 5 : 12%</div>
-            </div>
-            <div class="news"> News</div>
         </div>
-        <div class="footer-content"> For any technical issue, please write to <a href="mailto:info@abesit.in">ABESIT</a>
         </div>
-    </div>
+    </section>
 
-
-
-    <script>
-
-        // ------Menu slidebar
-        const menuButton = document.querySelector(".menu-button");
-        const slideMenu = document.querySelector(".slide-menu");
-
-        menuButton.addEventListener("click", () => {
-            slideMenu.classList.toggle("open");
-        });
-        window.onclick = function (e) {
-            if (!e.target.matches('.slide-menu')) {
-                var myDropdown = document.getElementsById("menu-slider");
-                if (myDropdown.classList.contains("open")) {
-                    myDropdown.classList.remove('open');
-                }
-            }
-        }
-        // window.onclick = function (e) {
-        //     if (!e.target.matches('.dropbtn')) {
-        //         var myDropdown = document.getElementById("myDropdown");
-        //         if (myDropdown.classList.contains('show')) {
-        //             myDropdown.classList.remove('show');
-        //         }
-        //     }
-        // }
-
-
-
-        // ------ring chart
-        function createRingChart() {
-            // Get the canvas element
-            var ctx = document.getElementById("myChart").getContext("2d");
-
-            // Create the data for the chart
-            var data = {
-                labels: ["Above 85%", "75% to 85%", "Below 75%"],
-                datasets: [{
-                    data: [70, 15, 10],
-                    backgroundColor: ["#109618", "#F4C242", "#DC3912"],
-                    hoverBackgroundColor: ["#109618", "#F4C242", "#DC3912"]
-                }]
-            };
-
-            // Create the options for the chart
-            var options = {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutoutPercentage: 50
-            };
-
-            // Create the ring chart using Chart.js
-            var myRingChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: data,
-                options: options,
-            });
-        }
-        // Call the function to create the chart
-        createRingChart();
-
-        // ------avatar-dropdown
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (e) {
-            if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                }
-            }
-        }
-
-        // for tabs
-        function openTab(tabName) {
-            var i;
-            var x = document.getElementsByClassName("tabs");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            document.getElementById(tabName).style.display = "block";
-        }
-    </script>
+    <script src="asset/js/script.js"></script>
 </body>
 
 </html>
